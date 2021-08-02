@@ -4,6 +4,7 @@ jobs:
   compress_and_push_s3:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - env:
           aws_key_id: ${{ secrets.S3_ACCESS }}
           aws_secret_access_key: ${{ secrets.S3_SECRET }}
