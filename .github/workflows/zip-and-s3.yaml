@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - env:
+        env:
           aws_key_id: ${{ secrets.S3_ACCESS }}
           aws_secret_access_key: ${{ secrets.S3_SECRET }}
           aws_s3_bucket: ${{ secrets.S3_BUCKET }}
