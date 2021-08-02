@@ -1,0 +1,22 @@
+name: learn-github-actions
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm install -g bats
+
+- name: copy file to  s3
+  on: [push]
+  shell: bash
+  env:
+    aws_key_id: ${{ secrets.S3_ACCESS }}
+    aws_secret_access_key: ${{ secrets.S3_SECRET }}
+    aws_s3_bucket: ${{ secrets.S3_BUCKET }}
+  run: |
+    sudo apt-get update && sudo apt-get -y install awscli
+    tar -czvf archive-to-s3.tar.gz files-to-compress/
+    aws configure set aws_access_key_id $aws_key_id
+    aws configure set aws_secret_access_key $aws_secret_access_key 
+    aws configure set default.region us-east-1
+    aws s3 <fille_to_upload> s3://$aws_s3_bucket/
