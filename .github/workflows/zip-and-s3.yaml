@@ -1,4 +1,4 @@
-- name: copy file to  s3
+name: copy file to  s3
   on: [push]
   shell: bash
   env:
