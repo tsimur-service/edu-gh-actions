@@ -1,7 +1,7 @@
 name: copy-file-to-s3
 on: [push]
 jobs:
-  compress_and_push_s3:
+  compress-and-push-to-s3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
