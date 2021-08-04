@@ -4,7 +4,6 @@ jobs:
   compress-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: compress to gz
       - uses: actions/checkout@v2
       - run: tar -czvf archive-to-s3.tar.gz files-to-compress/
       # - uses: actions/checkout@master
