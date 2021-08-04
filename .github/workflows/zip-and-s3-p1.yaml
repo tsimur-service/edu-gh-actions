@@ -1,4 +1,4 @@
-name: compress-and-copy-to-S3
+name: compress-and-copy-to-s3
 on: [push]
 jobs:
   compress-and-deploy:
