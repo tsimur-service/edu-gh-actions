@@ -6,7 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: compress to gz
-        uses: actions/checkout@v2
         run: tar -czvf archive-to-s3.tar.gz files-to-compress/
       - name: Upload binary to S3 bucket
         uses: tpaschalis/s3-sync-action@master
