@@ -1,4 +1,4 @@
-name: copy-file-to-s31
+name: copy-file-to-s3
 on: [push]
 jobs:
   compress-and-push-to-s3:
