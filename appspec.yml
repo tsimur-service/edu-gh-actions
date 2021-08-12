@@ -1,5 +1,5 @@
 version: 0.0
 os: linux
 files:
-  - source: ./files-to-compress/*
+  - source: files-to-compress/*
     destination: /home/ubuntu
