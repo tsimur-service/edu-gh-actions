@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: compress to gz
-        run: tar -czvf archive-to-s3.tar.gz files-to-compress/ appspec.yml
+        run: cp files-to-compress/* /home/ubuntu
       - name: Upload *.gz to S3 bucket
         uses: tpaschalis/s3-sync-action@master
         env:
