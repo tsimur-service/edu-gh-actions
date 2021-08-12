@@ -3,5 +3,5 @@ os: linux
 files:
   - source: files-to-compress/test1
     destination: /home/ubuntu
-  - source: files-to-compress/test1
+  - source: files-to-compress/test2
     destination: /home/ubuntu
